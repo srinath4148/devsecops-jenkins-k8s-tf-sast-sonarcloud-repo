@@ -29,7 +29,7 @@
 				<jdk>1.8</jdk>
 			</activation>
 			<properties>
-				<jvm.args.perm.size>-XX:MaxMetaspaceSize=128m</jvm.args.perm.size>
+				<jvm.args.perm.size>-XX:MaxMetaspaceSize=256m</jvm.args.perm.size>
 				<jvm.args.gc.log.path>-Xloggc:logs/gc_%p_%t.log</jvm.args.gc.log.path>
 			</properties>
 		</profile>
