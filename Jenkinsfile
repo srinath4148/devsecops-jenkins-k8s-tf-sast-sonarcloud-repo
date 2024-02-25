@@ -3,11 +3,15 @@ pipeline {
   tools { 
         maven 'Maven_3_2_5'  
     }
+    environment {
+        // Set JVM_OPTS without MaxPermSize
+        JVM_OPTS = '-Xmx512m'
+    }
    stages{
 
   stage('BuildingSourceCode'){
         steps{
-        sh 'mvn install'
+        sh 'mvn clean install'
         }
   }
         stage('TestingSourceCode'){
